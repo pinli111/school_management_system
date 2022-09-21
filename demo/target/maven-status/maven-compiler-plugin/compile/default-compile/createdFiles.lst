@@ -1,0 +1,12 @@
+com/example/demo/student/StudentController.class
+com/example/demo/teacher/TeacherRepo.class
+com/example/demo/student_assignment/StudentAssignmentController.class
+com/example/demo/student/StudentRepo.class
+com/example/demo/student/StudentConfig.class
+com/example/demo/DemoApplication.class
+com/example/demo/student/StudentService.class
+com/example/demo/teacher/TeacherController.class
+com/example/demo/teacher/Teacher.class
+com/example/demo/JsonToJavaObjectBean.class
+com/example/demo/teacher/TeacherService.class
+com/example/demo/student/Student.class
