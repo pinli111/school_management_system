@@ -20,8 +20,9 @@ public interface StudentRepo extends JpaRepository<Student, Long> {
     @Query("SELECT t.id FROM Teacher t WHERE t.email in ?1")
     List<Long> findTeacherByEmail(List<String> emails);
 
-    @Query(value = "SELECT * FROM Student WHERE teacher_id in ?1", nativeQuery = true)
+    @Query(value = "SELECT * FROM student s LEFT JOIN student_assignment a ON s.id = a.student_id WHERE a.teacher_id in ?1", nativeQuery = true)
     List<Student> findStudentsByTeacherId(List<Long> teacherId);
+    
     @Modifying
     @Query("DELETE FROM Student s WHERE s.email = ?1")
     void deleteStudentsByEmail(String email);
